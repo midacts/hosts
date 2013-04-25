@@ -13,10 +13,10 @@
 #
 #
 class hosts {
-  file { '/testfile':
+  file { '/etc/hosts':
     ensure	=> file,
     content	=> template('hosts/hosts.erb'),
-    mode	=> '313',
+    mode	=> '664',
     owner	=> 'root',
     group	=> 'root',
   }
